@@ -46,15 +46,15 @@ const Topbar = () => {
       </div>
 
       <div className="flex items-center md:space-x-6 sm:space-x-6 space-x-2 ml-auto relative mr-4">
-        <Link to="/" className="text-[4px] sm:text-[8px] lg:text-sm hover:text-yellow-400">Home</Link>
-        <Link to="/services" className="text-[4px] sm:text-[8px] lg:text-sm hover:text-yellow-400">Services</Link>
-        <Link to="/experience" className="text-[4px] sm:text-[8px] lg:text-sm hover:text-yellow-400">Past Experience</Link>
-        <Link to="/about" className="text-[4px] sm:text-[8px] lg:text-sm hover:text-yellow-400">About Us</Link>
+        <Link to="/" className="text-[6px] sm:text-[8px] lg:text-sm hover:text-yellow-400">Home</Link>
+        <Link to="/services" className="text-[6px] sm:text-[8px] lg:text-sm hover:text-yellow-400">Services</Link>
+        <Link to="/experience" className="text-[6px] sm:text-[8px] lg:text-sm hover:text-yellow-400">Past Experience</Link>
+        <Link to="/about" className="text-[6px] sm:text-[8px] lg:text-sm hover:text-yellow-400">About Us</Link>
 
         <div className="relative -mt-2.5 md:mt-0" ref={dropdownRef}>
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="text-[4px] sm:text-[8px]  lg:text-sm hover:text-yellow-400 focus:outline-none"
+            className="text-[6px] sm:text-[8px]  lg:text-sm hover:text-yellow-400 focus:outline-none"
           >
             Why Lavai?
           </button>
@@ -76,7 +76,7 @@ const Topbar = () => {
           )}
         </div>
 
-        <Link to="/login" className="text-[4px] sm:text-[8px] lg:text-sm bg-green-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
+        <Link to="/login" className="text-[6px] sm:text-[8px] lg:text-sm bg-green-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
           Login
         </Link>
       </div>
