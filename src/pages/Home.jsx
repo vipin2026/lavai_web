@@ -63,11 +63,11 @@ export default function Home() {
      <div className="min-h-screen  flex flex-col">
       <div className="relative flex flex-col items-center h-[90vh]   bg-gradient-to-r from-blue-800 to-purple-600 text-white">
         {/* Animated Words */}
-        <div className='absolute left-0 md:mt-12 md:ml-8 ml-8 mt-8 '>
+        <div className='absolute left-0 md:mt-12 md:ml-8 ml-6 mt-8 '>
         <img src="/images/home.gif" alt="gif" className="h-[150px] w-[150px] md:h-[500px] md:w-[700px] sm:h-[40px] sm:w-[40px]" />
         </div>
 
-        <div className='absolute flex flex-col items-center right-0 md:mr-40 md:mt-40 mt-16 mr-10 '>
+        <div className='absolute flex flex-col items-center right-0 md:mr-40 md:mt-40 mt-16 mr-8 '>
           <h1 className="md:text-5xl text-sm font-bold text-center mb-6">
             {words.map((word, index) => (
               <span
