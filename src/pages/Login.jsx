@@ -1,43 +1,47 @@
 import React, { useState } from 'react';
-import {
-  TextField,
-  Button,
-  Box,
-  Typography,
-  Container,
-  Paper,
-  IconButton,
-  InputAdornment,
-} from '@mui/material';
-import { Visibility, VisibilityOff } from '@mui/icons-material';
+import axios from 'axios';
+import { TextField, Button, Box, Typography, Container, Paper } from '@mui/material';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false); // To manage loading state
+  const [successMessage, setSuccessMessage] = useState('');
 
-  const handleLogin = (e) => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleLogin = async (e) => {
     e.preventDefault();
     if (!email || !password) {
       setError('Please fill in both fields');
       return;
     }
     setError('');
+    setLoading(true); // Start loading
 
-    // Perform login logic here (e.g., make API call)
-    console.log('Admin Email:', email);
-    console.log('Password:', password);
+    try {
+      const response = await axios.post('http://localhost:4000/admin/login', {
+        email: email,
+        password: password,
+      });
+
+      console.log('Login Response:', response.data);
+      if (response.data.status) {
+        setSuccessMessage('Login Successful!');
+        setLoading(false); // Stop loading
+        navigate('/dashboard'); // Navigate to "/about" on success
+      } else {
+        setError(response.data.message || 'Login failed');
+        setLoading(false);
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+      setError('Login failed, please try again');
+      setLoading(false); // Stop loading
+    }
   };
-
-  const handleClickShowPassword = () => {
-    setShowPassword(!showPassword);
-  };
-
-  const handleMouseDownPassword = (e) => {
-    e.preventDefault();
-  };
-
 
   return (
     <Container component="main" maxWidth="xs">
@@ -66,28 +70,20 @@ const Login = () => {
             fullWidth
             name="password"
             label="Password"
-            type={showPassword ? 'text' : 'password'}
+            type="password"
             id="password"
             autoComplete="current-password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <IconButton
-                    aria-label="toggle password visibility"
-                    onClick={handleClickShowPassword}
-                    onMouseDown={handleMouseDownPassword}
-                  >
-                    {showPassword ? <VisibilityOff /> : <Visibility />}
-                  </IconButton>
-                </InputAdornment>
-              ),
-            }}
           />
           {error && (
             <Typography color="error" variant="body2">
               {error}
+            </Typography>
+          )}
+          {successMessage && (
+            <Typography color="primary" variant="body2">
+              {successMessage}
             </Typography>
           )}
           <Button
@@ -95,9 +91,9 @@ const Login = () => {
             fullWidth
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
-           
+            disabled={loading} // Disable button while loading
           >
-            Login
+            {loading ? 'Logging in...' : 'Login'}
           </Button>
         </Box>
       </Paper>

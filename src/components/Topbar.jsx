@@ -2,11 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Topbar = () => {
-  const location = useLocation(); // Get the current location
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State to handle dropdown visibility
-  const dropdownRef = useRef(null); // Reference for the dropdown
+  const location = useLocation();
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
-  // Services list for the dropdown
   const services = [
     'Account-Based Marketing (ABM)',
     'Content Marketing',
@@ -30,50 +29,32 @@ const Topbar = () => {
   };
 
   useEffect(() => {
-    // Close dropdown when the path changes
     setIsDropdownOpen(false);
   }, [location]);
 
   useEffect(() => {
-    // Add event listener for clicks outside the dropdown
     document.addEventListener('mousedown', handleOutsideClick);
-
     return () => {
-      // Cleanup the event listener
       document.removeEventListener('mousedown', handleOutsideClick);
     };
   }, []);
 
   return (
-    <div className="flex justify-between items-center p-4 bg-gray-800 text-white">
-      {/* Left Side: Logo and Company Name */}
-      <div className="flex items-center">
-        {/* <div className='mr-3 bg-black w-18'> */}
-        <p className='text-2xl p-2 text-blue-500 font-bold'>LAVAI</p>
-
-        {/* </div> */}
-        {/* <img src="/images/logo1.jpg" alt="Logo" className="w-24 h-10 mr-3" /> */}
-        {/* <span className="text-xl font-bold">Lav.AI</span> */}
+    <div className="flex justify-between items-center bg-gray-800 text-white">
+      <div className="flex items-center ">
+        <p className='sm:text-2xl md:text-2xl text-sm p-2 text-blue-500 font-bold'>LAVAI</p>
       </div>
 
+      <div className="flex items-center space-x-6 ml-auto relative mr-4">
+        <Link to="/" className="text-[6px] sm:text-[8px] lg:text-sm hover:text-yellow-400">Home</Link>
+        <Link to="/services" className="text-[6px] sm:text-[8px] lg:text-sm hover:text-yellow-400">Services</Link>
+        <Link to="/experience" className="text-[6px] sm:text-[8px] lg:text-sm hover:text-yellow-400">Past Experience</Link>
+        <Link to="/about" className="text-[6px] sm:text-[8px] lg:text-sm hover:text-yellow-400">About Us</Link>
 
-      <div className="flex space-x-6 relative">
-
-        <Link to="/" className="hover:text-yellow-400">Home</Link>
-
-        <Link to="/services" className="hover:text-yellow-400">Services</Link>
-
-        <Link to="/experience" className="hover:text-yellow-400">Past Experience</Link>
-
-
-        <Link to="/about" className="hover:text-yellow-400">About Us</Link>
-
-
-        {/* Dropdown for "Vipin" */}
-        <div className="relative" ref={dropdownRef}>
+        <div className="relative -mt-2.5 md:mt-0" ref={dropdownRef}>
           <button
-            onClick={() => setIsDropdownOpen(!isDropdownOpen)} // Toggle dropdown visibility
-            className="hover:text-yellow-400 focus:outline-none"
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            className="text-[6px] sm:text-[8px]  lg:text-sm hover:text-yellow-400 focus:outline-none"
           >
             Why Lavai?
           </button>
@@ -83,9 +64,9 @@ const Topbar = () => {
                 {services.map((service, index) => (
                   <Link
                     key={index}
-                    to={`/services/${service.toLowerCase().replace(/ /g, '-')}`} // Generate dynamic routes
+                    to={`/services/${service.toLowerCase().replace(/ /g, '-')}`}
                     className="block px-4 py-2 text-sm text-white hover:bg-gray-700 border-b border-gray-600 last:border-b-0"
-                    onClick={() => setIsDropdownOpen(false)} // Close dropdown on link click
+                    onClick={() => setIsDropdownOpen(false)}
                   >
                     {service}
                   </Link>
@@ -93,13 +74,11 @@ const Topbar = () => {
               </div>
             </div>
           )}
-
         </div>
 
-        {/* Login Button */}
-        {/* {location.pathname !== '/login' && ( */}
-        <Link to="/login" className="bg-green-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">Login</Link>
-        {/* )} */}
+        <Link to="/login" className="text-[6px] sm:text-[8px] lg:text-sm bg-green-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
+          Login
+        </Link>
       </div>
     </div>
   );
