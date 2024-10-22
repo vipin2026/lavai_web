@@ -45,7 +45,7 @@ const Topbar = () => {
         <p className='sm:text-2xl md:text-2xl text-sm p-2 text-blue-500 font-bold'>LAVAI</p>
       </div>
 
-      <div className="flex items-center space-x-6 ml-auto relative mr-4">
+      <div className="flex items-center md:space-x-6 sm:space-x-6 space-x-2 ml-auto relative mr-4">
         <Link to="/" className="text-[4px] sm:text-[8px] lg:text-sm hover:text-yellow-400">Home</Link>
         <Link to="/services" className="text-[4px] sm:text-[8px] lg:text-sm hover:text-yellow-400">Services</Link>
         <Link to="/experience" className="text-[4px] sm:text-[8px] lg:text-sm hover:text-yellow-400">Past Experience</Link>
