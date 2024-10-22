@@ -67,7 +67,7 @@ export default function Home() {
         <img src="/images/home.gif" alt="gif" className="h-[150px] w-[150px] md:h-[500px] md:w-[700px] sm:h-[40px] sm:w-[40px]" />
         </div>
 
-        <div className='absolute flex flex-col items-center right-0 md:mr-40 md:mt-40 mt-16 mr-14 '>
+        <div className='absolute flex flex-col items-center right-0 md:mr-40 md:mt-40 mt-16 mr-10 '>
           <h1 className="md:text-5xl text-sm font-bold text-center mb-6">
             {words.map((word, index) => (
               <span
