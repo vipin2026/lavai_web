@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import FinancialServices from './servicesPages/FinancialServices';
-import Healthcare from './servicesPages/HealthCare';
-import PublicSector from './servicesPages/PublicSector';
-import Utils from './servicesPages/Utils';
+// import FinancialServices from './servicesPages/FinancialServices';
+// import Healthcare from './servicesPages/HealthCare';
+// import PublicSector from './servicesPages/PublicSector';
+// import Utils from './servicesPages/Utils';
 
 
 export default function Services() {
@@ -13,10 +13,10 @@ export default function Services() {
       <h1 className="text-4xl font-extrabold text-center mb-10 text-yellow-200">Our Marketing Strategies</h1>
 
       <div>
-<Utils/>
+{/* <Utils/>
 <PublicSector/>
 <Healthcare/>
-<FinancialServices/>
+<FinancialServices/> */}
       </div>
    
     </div>
