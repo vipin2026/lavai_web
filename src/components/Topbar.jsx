@@ -135,7 +135,7 @@ const Topbar = () => {
             </button>
             {isServicesDropdownOpen && (
               <div
-                className="absolute left-0 mt-3 bg-white border border-gray-300 rounded-lg shadow-lg z-50 p-6 w-[400px]"
+                className="absolute left-0 mt-3 bg-gray-200 border border-gray-300 rounded-lg shadow-lg z-50 p-6 w-[400px]"
                 ref={servicesDropdownRef}
               >
                 <div className="grid grid-cols-3 gap-6">
@@ -181,27 +181,32 @@ const Topbar = () => {
           </div>
           <Link to="/experience" className="text-[8px] sm:text-[8px] lg:text-sm hover:text-yellow-400">Past Experience</Link>
           <Link to="/about" className="text-[8px] sm:text-[8px] lg:text-sm hover:text-yellow-400">About Us</Link>
-          <div className="relative" ref={dropdownRef}>
-            <button
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="text-[8px] sm:text-[8px] lg:text-sm hover:text-yellow-400 focus:outline-none"
-            >
-              Why Lavai?
-            </button>
-            {isDropdownOpen && (
-              <div className="absolute right-0 mt-3 bg-white border border-gray-300 rounded-lg shadow-lg z-50 p-6 w-[400px]">
-                {lavai.map((item, index) => (
-                  <Link
-                    key={index}
-                    to={`/why-lavai/${item.toLowerCase().replace(/ /g, '-')}`}
-                    className="block text-sm text-gray-600 hover:text-purple-600 hover:underline mt-2"
-                  >
-                    {item}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
+
+          <div className="relative -mt-2.5 md:mt-0" ref={dropdownRef}>
+<button
+  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+  className="text-[4px] sm:text-[8px]  lg:text-sm hover:text-yellow-400 focus:outline-none"
+>
+  Why Lavai?
+</button>
+{isDropdownOpen && (
+  <div className="absolute right-0 mt-2 w-80 bg-gray-900 border border-gray-700 rounded-md shadow-lg z-50 p-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+      {lavai.map((service, index) => (
+        <Link
+          key={index}
+          to={`/lavai/${service.toLowerCase().replace(/ /g, '-')}`}
+          className="block px-4 py-2 text-sm text-white hover:bg-gray-700 border-b border-gray-600 last:border-b-0"
+          onClick={() => setIsDropdownOpen(false)}
+        >
+          {service}
+        </Link>
+      ))}
+    </div>
+  </div>
+)}
+</div>
+
           <Link to="/login" className="text-[8px] sm:text-[8px] lg:text-sm bg-green-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
           Login
         </Link>
