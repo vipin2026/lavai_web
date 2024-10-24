@@ -107,7 +107,7 @@ export default function Home() {
       </div>
 
 <Cards/>
-<Diagram1/>
+{/* <Diagram1/> */}
 <Options/>
 <div className="flex-grow mb-16"></div>
         <BottomBar />
