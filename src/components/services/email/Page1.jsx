@@ -28,7 +28,7 @@ export default function Page1() {
                                 fill="currentColor"
                             ></path>
                         </svg>
-                        <span className="transition-transform duration-[0.5s] ease-[cubic-bezier(0.76, 0, 0.24, 1)] hover:translate-x-[7px]">Launch</span>
+                        <span className="transition-transform duration-[0.5s] ease-[cubic-bezier(0.76, 0, 0.24, 1)] hover:translate-x-[7px]">Get Demo</span>
                     </button>
                 </div>
 
