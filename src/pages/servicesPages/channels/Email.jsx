@@ -2,6 +2,8 @@ import React from 'react'
 import Page1 from '../../../components/services/email/Page1'
 import Page2 from '../../../components/services/email/Page2'
 import Page3 from '../../../components/services/email/Page3'
+import Page4 from '../../../components/services/email/Page4'
+import Page5 from '../../../components/services/email/Page5'
 
 export default function Email(){
     return(
@@ -18,6 +20,12 @@ export default function Email(){
         {/* page 3 content  */}
         <div className='mt-[20px]'>
         <Page3/>
+        </div>
+        <div className='mt-[20px]'>
+        <Page4/>
+        </div>
+        <div className='mt-[20px]'>
+        <Page5/>
         </div>
     </div>
     )
