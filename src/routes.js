@@ -13,6 +13,11 @@ import Healthcare from "./pages/servicesPages/channels/HealthCare";
 import Utils from "./pages/servicesPages/channels/Utils";
 import PublicSector from "./pages/servicesPages/channels/PublicSector";
 import FinancialServices from './pages/servicesPages/channels/FinancialServices'
+import Sms from "./pages/servicesPages/channels/Sms";
+import Seo from "./pages/servicesPages/channels/Seo";
+import Linkedin from "./pages/servicesPages/channels/Linkedin";
+import Webinars from "./pages/servicesPages/channels/Webinars";
+
 
 const routes =[
     {path: "/", component:Home},
@@ -24,12 +29,17 @@ const routes =[
     {path:"dashboard",component:Dashboard},
     {path:"/services/channels/whatsapp",component:WhatsApp},
     {path:"/services/channels/email",component:Email},
+    {path:"/services/channels/sms",component:Sms},
+    {path:"/services/channels/webinars",component:Webinars},
+    {path:"/services/channels/linkedin-marketing",component:Linkedin},
+    {path:"/services/channels/seo-optimization",component:Seo},
     {path:"/services/orchestration/journey-orchestration",component:Journey},
     {path:"/services/orchestration/experimentation",component:Experimentation},
     {path:"/services/vertical/utilities",component:Utils},
     {path:"/services/vertical/financial-services",component:FinancialServices},
     {path:"/services/vertical/public-sector",component:PublicSector},
     {path:"/services/vertical/healthcare",component:Healthcare},
+    
     
    
 ];

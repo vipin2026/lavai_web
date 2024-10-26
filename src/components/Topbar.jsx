@@ -26,7 +26,7 @@ const Topbar = () => {
   ];
 
   const services = {
-    Channels: ['WhatsApp', 'Email'],
+    Channels: ['WhatsApp', 'Email', 'Sms', 'Webinars' , 'LinkedIn Marketing' , 'SEO Optimization'],
     Orchestration: ['Journey Orchestration', 'Experimentation'],
     Vertical: ['Utilities', 'Financial Services', 'Public Sector', 'Healthcare'],
   };
