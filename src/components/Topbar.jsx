@@ -143,7 +143,7 @@ const Topbar = () => {
       )}
     </div>
 
-    <Link to="/experience" className="block text-sm text-white-600 hover:text-yellow-400 py-2">Past Experience</Link>
+    {/* <Link to="/experience" className="block text-sm text-white-600 hover:text-yellow-400 py-2">Past Experience</Link> */}
     <Link to="/about" className="block text-sm text-white-600 hover:text-yellow-400 py-2">About Us</Link>
     <Link to="/login" className="block text-sm font-bold py-2 text-white rounded">Login</Link>
   </div>
@@ -206,7 +206,7 @@ const Topbar = () => {
               </div>
             )}
           </div>
-          <Link to="/experience" className="text-[8px] sm:text-[8px] lg:text-sm hover:text-yellow-400">Past Experience</Link>
+          {/* <Link to="/experience" className="text-[8px] sm:text-[8px] lg:text-sm hover:text-yellow-400">Past Experience</Link> */}
           <Link to="/about" className="text-[8px] sm:text-[8px] lg:text-sm hover:text-yellow-400">About Us</Link>
 
           <div className="relative -mt-2.5 md:mt-0" ref={dropdownRef}>
