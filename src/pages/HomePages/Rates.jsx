@@ -16,7 +16,7 @@ const Rates = ({ isVisible }) => {
       {/* Left Side Text */}
 
       
-      <div className="md:w-1/2 w-full mb-8 md:mb-0 text-center md:text-left ">
+      <div className="md:w-1/2 w-full mb-8 md:mb-0 text-center md:text-left ml-20">
         <h1 className="text-4xl font-bold mb-4">
           LAVAI helps improve decision making
         </h1>

@@ -6,7 +6,7 @@ export default function Page2() {
             <div className='h-[500px]'>
                 {/* Heading for the cards */}
                 <div className='text-center mb-8'>
-                    <h1 className="text-3xl font-bold underline decoration-cyan-500 ">Transform Your Client Engagement with Classic channels</h1>
+                    <h1 className="text-3xl font-bold text-white underline decoration-cyan-500 ">Transform Your Client Engagement with Classic channels</h1>
                     <p className='mt-6 w-[700px] ml-[27%] text-white'>At LAVAI, we believe in the power of events to drive client acquisition and enhance your organization’s reach. 
                     Our expertly crafted events are designed to showcase your strengths and connect you with potential clients:</p>
                 </div>
@@ -39,7 +39,7 @@ export default function Page2() {
                     </div>
                 </div>
                 <div className='flex flex-col justify-center items-center mt-10'>
-    <h1 className="text-center font-bold text-2xl">Partner with LAVAI to unlock new opportunities and drive growth through expertly organized events. Together, we’ll elevate your client engagement strategy to new heights.</h1>
+    <h1 className="text-center text-white font-bold text-2xl">Partner with LAVAI to unlock new opportunities and drive growth through expertly organized events. Together, we’ll elevate your client engagement strategy to new heights.</h1>
 </div>
 
             </div>

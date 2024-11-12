@@ -208,8 +208,9 @@ const Topbar = () => {
           </div>
           {/* <Link to="/experience" className="text-[8px] sm:text-[8px] lg:text-sm hover:text-yellow-400">Past Experience</Link> */}
           <Link to="/about" className="text-[8px] sm:text-[8px] lg:text-sm hover:text-yellow-400">About Us</Link>
+          {/* <Link to="/video" className="text-[8px] sm:text-[8px] lg:text-sm hover:text-yellow-400">Video</Link> */}
 
-          <div className="relative -mt-2.5 md:mt-0" ref={dropdownRef}>
+          {/* <div className="relative -mt-2.5 md:mt-0" ref={dropdownRef}>
 <button
   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
   className="text-[4px] sm:text-[8px]  lg:text-sm hover:text-yellow-400 focus:outline-none"
@@ -232,7 +233,7 @@ const Topbar = () => {
     </div>
   </div>
 )}
-</div>
+</div> */}
 
           <Link to="/login" className="text-[8px] sm:text-[8px] lg:text-sm bg-green-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
           Login

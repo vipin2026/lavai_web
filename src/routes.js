@@ -17,6 +17,7 @@ import Sms from "./pages/servicesPages/channels/Sms";
 import Seo from "./pages/servicesPages/channels/Seo";
 import Linkedin from "./pages/servicesPages/channels/Linkedin";
 import Webinars from "./pages/servicesPages/channels/Webinars";
+import video from "./pages/video";
 
 
 const routes =[
@@ -39,6 +40,7 @@ const routes =[
     {path:"/services/vertical/financial-services",component:FinancialServices},
     {path:"/services/vertical/public-sector",component:PublicSector},
     {path:"/services/vertical/healthcare",component:Healthcare},
+    {path:"/video",component:video},
     
     
    

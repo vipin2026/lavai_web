@@ -29,15 +29,15 @@ const Card = ({ title, content }) => {
   className="w-[600px] h-[500px] border-[2px] rounded-[20px] bg-white overflow-hidden" // Added overflow-hidden
 >
   <h2
-    className="text-4xl text-gray-900 mb-4 pt-20 pl-20 pr-20 font-montserrat"
+    className="text-4xl text-gray-900 mb-4 pt-12 pl-12 pr-12 text-center font-montserrat"
     style={{ fontFamily: 'Europa Grotesk SH' }}
   >
     {title}
   </h2>
-  <p className="text-gray-700 pl-20 pr-20 font-opensans">{content}</p>
-  <button className="mt-10 ml-20 bg-blue-800 text-white p-2 rounded-[4px]">
+  <p className="text-gray-700 pl-20 pr-20  font-opensans">{content}</p>
+  {/* <button className="mt-10 ml-20 bg-blue-800 text-white p-2 rounded-[4px]">
     Learn more
-  </button>
+  </button> */}
   <img
     src="/images/theme.jpg"
     alt="theme"
@@ -53,7 +53,7 @@ const CardsPage = () => {
     return (
         <div className="min-h-screen  p-10 bg-gradient-to-r from-blue-800 to-purple-600 ">
             {/* <h1 className="text-4xl text-white text-center font-bold mb-10">Our Services</h1> */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ml-24 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ml-16 ">
                 {cardData.map((card, index) => (
                     <Card key={index} title={card.title} content={card.content} />
                 ))}
