@@ -162,7 +162,7 @@ const Topbar = () => {
             </button>
             {isServicesDropdownOpen && (
               <div
-                className="absolute left-0 mt-3 bg-gray-200 border border-gray-300 rounded-lg shadow-lg z-50 p-6 w-[400px]"
+                className="absolute -ml-44 mt-3 bg-gray-200 border border-gray-300 rounded-lg shadow-lg z-50 p-6 w-[400px]"
                 ref={servicesDropdownRef}
               >
                 <div className="grid grid-cols-3 gap-6">

@@ -14,7 +14,7 @@ export default function Page5() {
                 <div className="flex flex-col space-y-6 mt-10 w-2/4 border border-white rounded-lg p-6">
 
 
-                    <p className='text-lg font-semibold text-black'>Drive Higher Conversions</p>
+                    <p className='text-lg font-semibold text-white '>Drive Higher Conversions</p>
                     <div className='border border-white rounded-lg p-2 bg-white'>
                         <h1 className="text-4xl font-bold">Fine-Tune Your Email Strategy
                         </h1>

@@ -7,7 +7,7 @@ export default function Page1() {
 
                 {/* heading */}
                 <div className="flex flex-col items-start space-y-6 mt-32 ml-20">
-                    <h1 className="text-white text-7xl font-bold">Whatsapp</h1>
+                    <h1 className="text-white text-7xl font-bold ">Whatsapp</h1>
                     <h2 className="text-white text-2xl">Expanding the REACH and Increase conversions through simple conversations.</h2>
 
                     {/* Button */}

@@ -11,7 +11,7 @@ export default function Page4() {
                 <div className="flex flex-col space-y-6 mt-10 w-2/4 border border-white rounded-lg p-6">
 
 
-                    <p className='text-lg font-semibold text-black'>Cost and Time effective</p>
+                    <p className='text-lg font-semibold text-white '>Cost and Time effective</p>
                     <div className='border border-white rounded-lg p-2 bg-white'>
                         <h1 className="text-4xl font-bold">Streamline your campaign creation process and eliminate complexity. </h1>
                     </div>
