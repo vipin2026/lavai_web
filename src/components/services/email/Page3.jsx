@@ -14,8 +14,8 @@ export default function Page3() {
                 <div className="flex flex-col space-y-6 mt-10 w-2/4 border border-white rounded-lg p-6">
 
 
-                    <div className='border border-white rounded-lg p-2 bg-white'>
-                        <h1 className="text-4xl font-bold">Email Solutions Tailored for your Business </h1>
+                    <div className='border border-white rounded-lg p-4 bg-white'>
+                        <h1 className="text-2xl font-bold">Email Solutions Tailored for your Business </h1>
                     </div>
 
                     {/* Each heading and paragraph wrapped in a separate div */}

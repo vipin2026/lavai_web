@@ -12,8 +12,8 @@ export default function Page4() {
 
 
                     <p className='text-lg font-semibold text-white '>Cost and Time effective</p>
-                    <div className='border border-white rounded-lg p-2 bg-white'>
-                        <h1 className="text-4xl font-bold">Streamline your campaign creation process and eliminate complexity. </h1>
+                    <div className='border border-white rounded-lg p-4 bg-white'>
+                        <h1 className="text-2xl font-bold">Streamline your campaign creation process and eliminate complexity. </h1>
                     </div>
 
                     {/* Each heading and paragraph wrapped in a separate div */}

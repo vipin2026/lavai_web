@@ -15,8 +15,8 @@ export default function Page5() {
 
 
                     <p className='text-lg font-semibold text-white '>Drive Higher Conversions</p>
-                    <div className='border border-white rounded-lg p-2 bg-white'>
-                        <h1 className="text-4xl font-bold">Fine-Tune Your Email Strategy
+                    <div className='border border-white rounded-lg p-4 bg-white'>
+                        <h1 className="text-2xl font-bold">Fine-Tune Your Email Strategy
                         </h1>
                     </div>
 
